@@ -1,0 +1,5 @@
+{
+  "name": "Sonic Architect",
+  "description": "AI Voice Orchestrator Dashboard for managing voice bots, campaigns, and real-time call monitoring.",
+  "requestFramePermissions": ["microphone"]
+}
