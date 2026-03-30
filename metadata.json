@@ -1,5 +1,5 @@
 {
-  "name": "Sonic Architect",
-  "description": "AI Voice Orchestrator Dashboard for managing voice bots, campaigns, and real-time call monitoring.",
+  "name": "声波架构师",
+  "description": "AI 语音编排仪表板，用于管理语音机器人、营销活动和实时通话监控。",
   "requestFramePermissions": ["microphone"]
 }

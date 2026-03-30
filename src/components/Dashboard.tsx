@@ -22,34 +22,34 @@ import {
 } from 'recharts';
 
 const stats = [
-  { label: 'Active Calls', value: '1,284', change: '+12%', icon: Phone, color: 'text-blue-400', bg: 'bg-blue-400/10' },
-  { label: 'Avg. Duration', value: '4m 12s', change: '-2%', icon: Clock, color: 'text-purple-400', bg: 'bg-purple-400/10' },
-  { label: 'Success Rate', value: '94.2%', change: '+5%', icon: TrendingUp, color: 'text-green-400', bg: 'bg-green-400/10' },
-  { label: 'Total Cost', value: '$12,482', change: '+8%', icon: DollarSign, color: 'text-orange-400', bg: 'bg-orange-400/10' },
+  { label: '活跃通话', value: '1,284', change: '+12%', icon: Phone, color: 'text-blue-400', bg: 'bg-blue-400/10' },
+  { label: '平均通话时长', value: '4m 12s', change: '-2%', icon: Clock, color: 'text-purple-400', bg: 'bg-purple-400/10' },
+  { label: '成功率', value: '94.2%', change: '+5%', icon: TrendingUp, color: 'text-green-400', bg: 'bg-green-400/10' },
+  { label: '总成本', value: '$12,482', change: '+8%', icon: DollarSign, color: 'text-orange-400', bg: 'bg-orange-400/10' },
 ];
 
 const callVolumeData = [
-  { name: 'Mon', volume: 4000 },
-  { name: 'Tue', volume: 3000 },
-  { name: 'Wed', volume: 2000 },
-  { name: 'Thu', volume: 2780 },
-  { name: 'Fri', volume: 1890 },
-  { name: 'Sat', volume: 2390 },
-  { name: 'Sun', volume: 3490 },
+  { name: '周一', volume: 4000 },
+  { name: '周二', volume: 3000 },
+  { name: '周三', volume: 2000 },
+  { name: '周四', volume: 2780 },
+  { name: '周五', volume: 1890 },
+  { name: '周六', volume: 2390 },
+  { name: '周日', volume: 3490 },
 ];
 
 const intentData = [
-  { name: 'Support', value: 80, fill: '#007AFF' },
-  { name: 'Sales', value: 65, fill: '#8B5CF6' },
-  { name: 'Billing', value: 45, fill: '#10B981' },
-  { name: 'Other', value: 30, fill: '#F59E0B' },
+  { name: '技术支持', value: 80, fill: '#007AFF' },
+  { name: '销售咨询', value: 65, fill: '#8B5CF6' },
+  { name: '账单查询', value: 45, fill: '#10B981' },
+  { name: '其他', value: 30, fill: '#F59E0B' },
 ];
 
 const liveCalls = [
-  { id: 'C-1024', bot: 'Aria (Support)', status: 'Active', duration: '2:14', sentiment: 'Positive' },
-  { id: 'C-1025', bot: 'Leo (Sales)', status: 'Active', duration: '1:45', sentiment: 'Neutral' },
-  { id: 'C-1026', bot: 'Aria (Support)', status: 'Active', duration: '0:32', sentiment: 'Positive' },
-  { id: 'C-1027', bot: 'Nova (Billing)', status: 'Connecting', duration: '0:00', sentiment: '-' },
+  { id: 'C-1024', bot: 'Aria (支持)', status: '活跃中', duration: '2:14', sentiment: '正面' },
+  { id: 'C-1025', bot: 'Leo (销售)', status: '活跃中', duration: '1:45', sentiment: '中性' },
+  { id: 'C-1026', bot: 'Aria (支持)', status: '活跃中', duration: '0:32', sentiment: '正面' },
+  { id: 'C-1027', bot: 'Nova (账单)', status: '连接中', duration: '0:00', sentiment: '-' },
 ];
 
 const Dashboard: React.FC = () => {
@@ -57,15 +57,15 @@ const Dashboard: React.FC = () => {
     <div className="p-8 space-y-8 max-w-7xl mx-auto">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight">System Overview</h2>
-          <p className="text-brand-text-muted text-sm mt-1">Real-time performance metrics for your voice infrastructure.</p>
+          <h2 className="text-2xl font-bold tracking-tight">系统概览</h2>
+          <p className="text-brand-text-muted text-sm mt-1">语音基础设施的实时性能指标。</p>
         </div>
         <div className="flex gap-3">
           <button className="px-4 py-2 bg-brand-card border border-brand-border rounded-lg text-sm font-medium hover:bg-white/5 transition-colors">
-            Export Report
+            导出报告
           </button>
           <button className="px-4 py-2 bg-brand-primary text-white rounded-lg text-sm font-medium hover:bg-brand-primary/90 transition-colors">
-            Launch Campaign
+            启动营销活动
           </button>
         </div>
       </div>
@@ -95,10 +95,10 @@ const Dashboard: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 glass-card p-6">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="font-bold">Call Volume Trends</h3>
+            <h3 className="font-bold">通话量趋势</h3>
             <select className="bg-brand-bg border border-brand-border rounded-md text-xs px-2 py-1 focus:outline-none">
-              <option>Last 7 Days</option>
-              <option>Last 30 Days</option>
+              <option>最近 7 天</option>
+              <option>最近 30 天</option>
             </select>
           </div>
           <div className="h-[300px] w-full">
@@ -128,7 +128,7 @@ const Dashboard: React.FC = () => {
         </div>
 
         <div className="glass-card p-6">
-          <h3 className="font-bold mb-8">Intent Distribution</h3>
+          <h3 className="font-bold mb-8">意图分布</h3>
           <div className="h-[300px] w-full flex items-center justify-center">
             <ResponsiveContainer width="100%" height="100%">
               <RadialBarChart 
@@ -160,18 +160,18 @@ const Dashboard: React.FC = () => {
       {/* Live Monitor Table */}
       <div className="glass-card overflow-hidden">
         <div className="p-6 border-b border-brand-border flex items-center justify-between">
-          <h3 className="font-bold">Live Call Monitor</h3>
-          <button className="text-brand-primary text-sm font-medium hover:underline">View All Logs</button>
+          <h3 className="font-bold">实时通话监控</h3>
+          <button className="text-brand-primary text-sm font-medium hover:underline">查看所有日志</button>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-left">
             <thead>
               <tr className="bg-white/5 text-brand-text-muted text-xs uppercase tracking-wider">
-                <th className="px-6 py-4 font-semibold">Call ID</th>
-                <th className="px-6 py-4 font-semibold">Bot Identity</th>
-                <th className="px-6 py-4 font-semibold">Status</th>
-                <th className="px-6 py-4 font-semibold">Duration</th>
-                <th className="px-6 py-4 font-semibold">Sentiment</th>
+                <th className="px-6 py-4 font-semibold">通话 ID</th>
+                <th className="px-6 py-4 font-semibold">机器人身份</th>
+                <th className="px-6 py-4 font-semibold">状态</th>
+                <th className="px-6 py-4 font-semibold">时长</th>
+                <th className="px-6 py-4 font-semibold">情绪</th>
                 <th className="px-6 py-4 font-semibold"></th>
               </tr>
             </thead>
@@ -182,9 +182,9 @@ const Dashboard: React.FC = () => {
                   <td className="px-6 py-4 text-sm font-medium">{call.bot}</td>
                   <td className="px-6 py-4 text-sm">
                     <span className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium ${
-                      call.status === 'Active' ? 'bg-green-400/10 text-green-400' : 'bg-orange-400/10 text-orange-400'
+                      call.status === '活跃中' ? 'bg-green-400/10 text-green-400' : 'bg-orange-400/10 text-orange-400'
                     }`}>
-                      <span className={`w-1.5 h-1.5 rounded-full ${call.status === 'Active' ? 'bg-green-400 animate-pulse' : 'bg-orange-400'}`}></span>
+                      <span className={`w-1.5 h-1.5 rounded-full ${call.status === '活跃中' ? 'bg-green-400 animate-pulse' : 'bg-orange-400'}`}></span>
                       {call.status}
                     </span>
                   </td>

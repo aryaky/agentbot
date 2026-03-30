@@ -17,10 +17,10 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
   const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'bots', label: 'Bot Configuration', icon: Bot },
-    { id: 'campaigns', label: 'Campaign Management', icon: Megaphone },
-    { id: 'calls', label: 'Call Logs', icon: PhoneCall },
+    { id: 'dashboard', label: '仪表板', icon: LayoutDashboard },
+    { id: 'bots', label: '机器人配置', icon: Bot },
+    { id: 'campaigns', label: '营销活动管理', icon: Megaphone },
+    { id: 'calls', label: '通话日志', icon: PhoneCall },
   ];
 
   return (
@@ -29,7 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
         <div className="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center shadow-lg shadow-brand-primary/20">
           <Zap className="text-white fill-white" size={24} />
         </div>
-        <h1 className="text-xl font-bold tracking-tight">Sonic Architect</h1>
+        <h1 className="text-xl font-bold tracking-tight">声波架构师</h1>
       </div>
 
       <nav className="flex-1 mt-4">
@@ -51,11 +51,11 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
       <div className="p-4 border-t border-brand-border">
         <div className="nav-item rounded-lg mb-2">
           <Settings size={20} />
-          <span className="font-medium">Settings</span>
+          <span className="font-medium">设置</span>
         </div>
         <div className="nav-item rounded-lg text-red-400 hover:bg-red-400/10 hover:text-red-400">
           <LogOut size={20} />
-          <span className="font-medium">Logout</span>
+          <span className="font-medium">退出登录</span>
         </div>
       </div>
     </div>

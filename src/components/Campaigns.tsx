@@ -12,9 +12,9 @@ import {
 } from 'lucide-react';
 
 const campaigns = [
-  { id: 'CAMP-001', name: 'Q1 Customer Feedback', status: 'Active', reach: '12,482', conversion: '18.4%', cost: '$2,450', color: 'bg-green-400' },
-  { id: 'CAMP-002', name: 'Spring Sales Outreach', status: 'Scheduled', reach: '45,000', conversion: '-', cost: '$8,200', color: 'bg-blue-400' },
-  { id: 'CAMP-003', name: 'Product Launch Beta', status: 'Completed', reach: '5,200', conversion: '24.1%', cost: '$1,150', color: 'bg-brand-text-muted' },
+  { id: 'CAMP-001', name: 'Q1 客户反馈调查', status: '进行中', reach: '12,482', conversion: '18.4%', cost: '$2,450', color: 'bg-green-400' },
+  { id: 'CAMP-002', name: '春季销售外呼', status: '已计划', reach: '45,000', conversion: '-', cost: '$8,200', color: 'bg-blue-400' },
+  { id: 'CAMP-003', name: '产品发布内测', status: '已完成', reach: '5,200', conversion: '24.1%', cost: '$1,150', color: 'bg-brand-text-muted' },
 ];
 
 const Campaigns: React.FC = () => {
@@ -22,12 +22,12 @@ const Campaigns: React.FC = () => {
     <div className="p-8 space-y-8 max-w-7xl mx-auto">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight">Campaign Management</h2>
-          <p className="text-brand-text-muted text-sm mt-1">Orchestrate and monitor your automated voice outreach.</p>
+          <h2 className="text-2xl font-bold tracking-tight">营销活动管理</h2>
+          <p className="text-brand-text-muted text-sm mt-1">编排并监控您的自动化语音外呼活动。</p>
         </div>
         <button className="px-4 py-2 bg-brand-primary text-white rounded-lg text-sm font-medium hover:bg-brand-primary/90 transition-colors flex items-center gap-2">
           <Plus size={18} />
-          New Campaign
+          新建营销活动
         </button>
       </div>
 
@@ -37,7 +37,7 @@ const Campaigns: React.FC = () => {
             <Users size={24} />
           </div>
           <div>
-            <p className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">Total Reach</p>
+            <p className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">总覆盖人数</p>
             <h3 className="text-xl font-bold">62,682</h3>
           </div>
         </div>
@@ -46,7 +46,7 @@ const Campaigns: React.FC = () => {
             <Target size={24} />
           </div>
           <div>
-            <p className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">Avg. Conversion</p>
+            <p className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">平均转化率</p>
             <h3 className="text-xl font-bold">21.2%</h3>
           </div>
         </div>
@@ -55,7 +55,7 @@ const Campaigns: React.FC = () => {
             <BarChart3 size={24} />
           </div>
           <div>
-            <p className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">ROI Index</p>
+            <p className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">ROI 指数</p>
             <h3 className="text-xl font-bold">4.8x</h3>
           </div>
         </div>
@@ -84,15 +84,15 @@ const Campaigns: React.FC = () => {
 
             <div className="grid grid-cols-3 gap-8 px-8 border-x border-brand-border">
               <div>
-                <p className="text-[10px] font-bold text-brand-text-muted uppercase tracking-wider">Reach</p>
+                <p className="text-[10px] font-bold text-brand-text-muted uppercase tracking-wider">覆盖人数</p>
                 <p className="text-sm font-bold mt-1">{camp.reach}</p>
               </div>
               <div>
-                <p className="text-[10px] font-bold text-brand-text-muted uppercase tracking-wider">Conv.</p>
+                <p className="text-[10px] font-bold text-brand-text-muted uppercase tracking-wider">转化</p>
                 <p className="text-sm font-bold mt-1">{camp.conversion}</p>
               </div>
               <div>
-                <p className="text-[10px] font-bold text-brand-text-muted uppercase tracking-wider">Cost</p>
+                <p className="text-[10px] font-bold text-brand-text-muted uppercase tracking-wider">成本</p>
                 <p className="text-sm font-bold mt-1">{camp.cost}</p>
               </div>
             </div>

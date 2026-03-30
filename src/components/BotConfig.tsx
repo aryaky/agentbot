@@ -17,26 +17,26 @@ const BotConfig: React.FC = () => {
   const [activeSection, setActiveSection] = useState('identity');
 
   const sections = [
-    { id: 'identity', label: 'Bot Identity', icon: Bot },
-    { id: 'vocal', label: 'Vocal Texture', icon: Mic2 },
-    { id: 'intelligence', label: 'Intelligence Feed', icon: BrainCircuit },
+    { id: 'identity', label: '机器人身份', icon: Bot },
+    { id: 'vocal', label: '声音质感', icon: Mic2 },
+    { id: 'intelligence', label: '智能喂养', icon: BrainCircuit },
   ];
 
   return (
     <div className="p-8 space-y-8 max-w-7xl mx-auto">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight">Bot Configuration</h2>
-          <p className="text-brand-text-muted text-sm mt-1">Define the persona, voice, and knowledge base of your AI agent.</p>
+          <h2 className="text-2xl font-bold tracking-tight">机器人配置</h2>
+          <p className="text-brand-text-muted text-sm mt-1">定义 AI 代理的角色、声音和知识库。</p>
         </div>
         <div className="flex gap-3">
           <button className="px-4 py-2 bg-brand-primary text-white rounded-lg text-sm font-medium hover:bg-brand-primary/90 transition-colors flex items-center gap-2">
             <Play size={16} />
-            Test Bot
+            测试机器人
           </button>
           <button className="px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-medium hover:bg-green-600 transition-colors flex items-center gap-2">
             <CheckCircle2 size={16} />
-            Deploy Changes
+            部署更改
           </button>
         </div>
       </div>
@@ -68,7 +68,7 @@ const BotConfig: React.FC = () => {
             <div className="glass-card p-8 space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">Bot Name</label>
+                  <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">机器人名称</label>
                   <input 
                     type="text" 
                     defaultValue="Aria" 
@@ -76,49 +76,49 @@ const BotConfig: React.FC = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">Primary Role</label>
+                  <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">主要角色</label>
                   <select className="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-2.5 focus:outline-none focus:border-brand-primary transition-all">
-                    <option>Customer Support</option>
-                    <option>Sales Outreach</option>
-                    <option>Technical Assistance</option>
-                    <option>Appointment Setter</option>
+                    <option>客户支持</option>
+                    <option>销售外呼</option>
+                    <option>技术协助</option>
+                    <option>预约挂号</option>
                   </select>
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">Persona Description</label>
+                <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">人设描述</label>
                 <textarea 
                   rows={4}
-                  placeholder="Describe the bot's personality, tone, and behavioral guidelines..."
+                  placeholder="描述机器人的性格、语气和行为准则..."
                   className="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-3 focus:outline-none focus:border-brand-primary transition-all resize-none"
-                  defaultValue="Aria is a helpful, empathetic, and professional customer support agent. She speaks clearly, avoids technical jargon unless necessary, and always aims to resolve issues in a single interaction."
+                  defaultValue="Aria 是一位乐于助人、富有同情心且专业的客户支持代理。她说话清晰，除非必要否则避免使用技术术语，并始终致力于在单次互动中解决问题。"
                 />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">Language</label>
+                  <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">语言</label>
                   <select className="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-2.5 focus:outline-none focus:border-brand-primary transition-all">
-                    <option>English (US)</option>
-                    <option>English (UK)</option>
-                    <option>Spanish</option>
-                    <option>French</option>
+                    <option>中文 (简体)</option>
+                    <option>英语 (美国)</option>
+                    <option>英语 (英国)</option>
+                    <option>西班牙语</option>
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">Dialect</label>
+                  <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">方言/口音</label>
                   <select className="w-full bg-brand-bg border border-brand-border rounded-lg px-4 py-2.5 focus:outline-none focus:border-brand-primary transition-all">
-                    <option>Neutral</option>
-                    <option>Southern</option>
-                    <option>Mid-Atlantic</option>
+                    <option>普通话 (标准)</option>
+                    <option>粤语</option>
+                    <option>中性</option>
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">Gender</label>
+                  <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">性别</label>
                   <div className="flex bg-brand-bg border border-brand-border rounded-lg p-1">
-                    <button className="flex-1 py-1.5 text-xs font-medium bg-brand-primary text-white rounded-md shadow-sm">Female</button>
-                    <button className="flex-1 py-1.5 text-xs font-medium text-brand-text-muted hover:text-white transition-colors">Male</button>
+                    <button className="flex-1 py-1.5 text-xs font-medium bg-brand-primary text-white rounded-md shadow-sm">女性</button>
+                    <button className="flex-1 py-1.5 text-xs font-medium text-brand-text-muted hover:text-white transition-colors">男性</button>
                   </div>
                 </div>
               </div>
@@ -130,7 +130,7 @@ const BotConfig: React.FC = () => {
               <div className="space-y-6">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">Pitch Modulation</label>
+                    <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">音高调节</label>
                     <span className="text-xs font-mono text-brand-primary">1.0x</span>
                   </div>
                   <input type="range" className="w-full h-1.5 bg-brand-bg rounded-lg appearance-none cursor-pointer accent-brand-primary" />
@@ -138,7 +138,7 @@ const BotConfig: React.FC = () => {
 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">Speaking Rate</label>
+                    <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">语速</label>
                     <span className="text-xs font-mono text-brand-primary">1.15x</span>
                   </div>
                   <input type="range" className="w-full h-1.5 bg-brand-bg rounded-lg appearance-none cursor-pointer accent-brand-primary" />
@@ -146,8 +146,8 @@ const BotConfig: React.FC = () => {
 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">Vocal Warmth</label>
-                    <span className="text-xs font-mono text-brand-primary">High</span>
+                    <label className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">声音亲和力</label>
+                    <span className="text-xs font-mono text-brand-primary">高</span>
                   </div>
                   <input type="range" className="w-full h-1.5 bg-brand-bg rounded-lg appearance-none cursor-pointer accent-brand-primary" />
                 </div>
@@ -158,8 +158,8 @@ const BotConfig: React.FC = () => {
                   <Mic2 size={24} />
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium">Preview Voice Sample</p>
-                  <p className="text-xs text-brand-text-muted mt-0.5">Hear how Aria sounds with current settings.</p>
+                  <p className="text-sm font-medium">预览声音样本</p>
+                  <p className="text-xs text-brand-text-muted mt-0.5">试听 Aria 在当前设置下的声音。</p>
                 </div>
                 <button className="p-3 bg-brand-primary text-white rounded-full hover:bg-brand-primary/90 transition-all shadow-lg shadow-brand-primary/20">
                   <Play size={20} fill="white" />
@@ -176,8 +176,8 @@ const BotConfig: React.FC = () => {
                     <Upload size={24} />
                   </div>
                   <div>
-                    <p className="text-sm font-medium">Upload Documents</p>
-                    <p className="text-xs text-brand-text-muted mt-1">PDF, DOCX, TXT (Max 50MB)</p>
+                    <p className="text-sm font-medium">上传文档</p>
+                    <p className="text-xs text-brand-text-muted mt-1">PDF, DOCX, TXT (最大 50MB)</p>
                   </div>
                 </div>
 
@@ -186,19 +186,19 @@ const BotConfig: React.FC = () => {
                     <Globe size={24} />
                   </div>
                   <div>
-                    <p className="text-sm font-medium">Crawl Website</p>
-                    <p className="text-xs text-brand-text-muted mt-1">Import knowledge from URL</p>
+                    <p className="text-sm font-medium">抓取网站</p>
+                    <p className="text-xs text-brand-text-muted mt-1">从 URL 导入知识</p>
                   </div>
                 </div>
               </div>
 
               <div className="space-y-4">
-                <h4 className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">Active Knowledge Sources</h4>
+                <h4 className="text-xs font-semibold text-brand-text-muted uppercase tracking-wider">活跃知识源</h4>
                 <div className="space-y-2">
                   {[
-                    { name: 'Product_Manual_v2.pdf', size: '2.4 MB', type: 'PDF' },
-                    { name: 'https://docs.sonicarchitect.ai', size: '42 Pages', type: 'URL' },
-                    { name: 'Support_FAQ_2024.txt', size: '128 KB', type: 'TXT' },
+                    { name: '产品手册_v2.pdf', size: '2.4 MB', type: 'PDF' },
+                    { name: 'https://docs.sonicarchitect.ai', size: '42 页', type: 'URL' },
+                    { name: '支持_常见问题_2024.txt', size: '128 KB', type: 'TXT' },
                   ].map((source, i) => (
                     <div key={i} className="flex items-center justify-between p-3 bg-brand-bg border border-brand-border rounded-lg group">
                       <div className="flex items-center gap-3">
@@ -218,7 +218,7 @@ const BotConfig: React.FC = () => {
                 </div>
                 <button className="w-full py-2.5 border border-brand-border border-dashed rounded-lg text-sm text-brand-text-muted hover:text-white hover:bg-white/5 transition-all flex items-center justify-center gap-2">
                   <Plus size={16} />
-                  Add New Source
+                  添加新来源
                 </button>
               </div>
             </div>
